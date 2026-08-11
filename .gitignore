@@ -1,0 +1,7 @@
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Each app manages its own node_modules, env files, build output, and
+# uploads via its own .gitignore (server/.gitignore, yourtube/.gitignore).
