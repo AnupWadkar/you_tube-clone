@@ -5,7 +5,7 @@ export default function SearchPage() {
   const router = useRouter();
   const { q } = router.query;
 
-  // Ensure q is always a string
+  // ✅ This is the fix – ensure q is always a string
   const searchQuery = typeof q === "string" ? q : "";
 
   return (
