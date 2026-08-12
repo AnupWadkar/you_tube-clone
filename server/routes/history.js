@@ -1,12 +1,9 @@
 import express from "express";
-import {
-  getallhistoryVideo,
-  handlehistory,
-  handleview,
-} from "../controllers/history.js";
+import { getAllHistory, handleHistory, handleView } from "../controllers/history.js";
 
-const routes = express.Router();
-routes.get("/:userId", getallhistoryVideo);
-routes.post("/views/:videoId", handleview);
-routes.post("/:videoId", handlehistory);
-export default routes;
+const router = express.Router();
+router.get("/:userId", getAllHistory);
+router.post("/views/:videoId", handleView);
+router.post("/:videoId", handleHistory);
+
+export default router;
